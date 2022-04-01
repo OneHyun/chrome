@@ -1,0 +1,23 @@
+.hidden {
+    display: none;
+}
+
+body{
+    overflow-x: hidden;
+}
+img{
+    opacity: 0.75;
+    position:absolute;
+    width:1920px;
+    height:1080px;
+    left: 0px;
+    top: 0px;
+    right:0px;
+    bottom:0px;
+    z-index: -2;
+    transition: opacity 3s linear;
+}
+
+.img-hide{
+    opacity: 0;
+}
