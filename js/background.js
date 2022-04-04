@@ -1,12 +1,10 @@
-const imgContainer = document.querySelector("#img-container");
-const images = ["0.png","1.png" , "2.png", "3.png", 
-                "4.png","5.png" , "6.png", "7.png",
-                "8.png","9.png" , "10.png", "11.png",
-                "12.png"];
+const imgContainer = document.querySelector("#bgimg-container");
+const images = ["0.png","1.png" , "2.png", "3.png"];
 
 const firstImage = new Image();
 const secondImage = new Image();
 const IMAGEHIDECLASS = "img-hide";
+const IMAGEBGCLASS = "bg_img";
 
 function getRandomImage(){
     const randImg = images[Math.floor(Math.random() * images.length)];
@@ -20,7 +18,7 @@ function toggleClass(a, b, randImg){
 }
 
 function paintImage(){
-    const randImg = `./img/bg/${getRandomImage()}`;
+    const randImg = `./resource/img/bg/${getRandomImage()}`;
     if(firstImage.classList.contains(IMAGEHIDECLASS))
         toggleClass(firstImage, secondImage, randImg);
     else
@@ -28,6 +26,8 @@ function paintImage(){
 }
 
 function setBGImages(){
+    firstImage.classList.add(IMAGEBGCLASS);
+    secondImage.classList.add(IMAGEBGCLASS);
     firstImage.setAttribute("draggable", false);
     secondImage.setAttribute("draggable", false);
     imgContainer.appendChild(firstImage);

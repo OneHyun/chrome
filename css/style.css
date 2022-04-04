@@ -1,23 +1,113 @@
+/* BootStrap */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css");
+
+@import url(./images.css);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
 .hidden {
     display: none;
 }
 
 body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     overflow-x: hidden;
-}
-img{
-    opacity: 0.75;
-    position:absolute;
-    width:1920px;
-    height:1080px;
-    left: 0px;
-    top: 0px;
-    right:0px;
-    bottom:0px;
-    z-index: -2;
-    transition: opacity 3s linear;
+    background-size: cover;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+
+    font-size: 24px;
+    font-weight: 600;
+
+    padding-top: 20px;
 }
 
+#todo-form input{
+    width: 300px;
+}
 .img-hide{
     opacity: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+.weather-header {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 15px;
+    border-radius: 15px;
+    text-shadow: 2px 2px 2px gray;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.clock{
+    font-size: 100px;
+    margin: 0px 0px 5px;
+    text-shadow: 2px 2px 2px gray;
+}
+
+main{
+    height: 100%;
+    display: flex;  
+    align-items: center;
+    justify-content:space-between;
+}
+
+#main-left,
+#main-right{
+    width: 250px;
+    height: 100%;
+    opacity: 0.5;
+}
+
+#main-center{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+#username-form,
+#greeting{
+    margin: 5px 0px;
+    font-size: 32px;
+}
+.username{
+    background: none;
+    padding: 0px 10px;
+
+    font-size: 32px;
+    color: white;
+    width: 20rem;
+    text-align: center;
+    border: 0px;
+    border-bottom: 0px solid white;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 2px gray;
+
+}
+.username:focus,
+.username:hover{
+    border: 0px;
+    border-bottom: 2px solid white;
+}
+
+.username::placeholder{
+    color: white;
+    text-shadow: 2px 2px 2px gray;
 }

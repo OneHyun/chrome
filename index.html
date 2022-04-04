@@ -8,37 +8,54 @@
     <title>Momentum</title>
 </head>
 <body>
-    <div id="img-container"></div>
-    <h2 id="clock">00:00</h2>
-    <form id="login-form" class="hidden">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-      />
-      <input type="submit" value="Log In" />
-    </form>
-    <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" required />
-    </form>
-    <ul id="todo-list"></ul>
+    <div id="bgimg-container"></div>
+    <header>
+      <div class="weather-header">
+        <div class="weather-location">
+          <span></span>
+          <span></span>
+        </div>
+        <span class="weather-temperature"></span>
+      </div>
+      <div></div>
+    </header>
+    <main>
+      <section id="main-left">
+      </section>
+      <section id="main-center">
+        <h2 class="clock">00:00</h2>
+        <form id="username-form" class="hidden">
+          <input class="username"
+            required
+            maxlength="15"
+            type="text"
+            placeholder="이름을 입력해주세요"
+          />
+        </form>
+        <h1 id="greeting" class="hidden"></h1>
+        <form id="todo-form">
+          <input type="text" placeholder="Write a To Do and Press Enter" required 
+          />
+        </form>
 
-    <div id="quote">
-      <span></span>
-      <span></span>
-    </div>
+        <div id="quote">
+          <span></span>
+          <span></span>
+        </div>
+      </section>
 
-    <div id="weather">
-      <span></span>
-      <span></span>
-    </div>
+      <section id="main-right">
+        <ul id="todo-list"></ul>
+      </section>
+    </main>
+
+    
     <script src="./js/apikey.js"></script>
     <script src="./js/greeting.js"></script>
     <script src="./js/clock.js"></script>
     <script src="./js/quotes.js"></script>
     <script src="./js/background.js"></script>
+    <script src="./js/backgroundsound.js"></script>
     <script src="./js/todo.js"></script>
     <script src="./js/weather.js"></script>
 </body>
