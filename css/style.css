@@ -38,12 +38,10 @@ body {
 main {
   height: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
 
   position: relative;
-
-  padding-bottom: 20px;
 }
 
 #username-form,
@@ -81,6 +79,9 @@ main {
 }
 
 .footer-ment {
+  position: absolute;
   font-weight: 400;
   font-size: 1.2rem;
+
+  bottom: 10px;
 }
