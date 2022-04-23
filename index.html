@@ -1,62 +1,101 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Momentum</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="bgimg-container"></div>
     <header>
-      <div class="weather-header">
-        <div class="weather-location">
-          <span></span>
-          <span></span>
+      <div class="header-list not-logined">
+        <div class="weather-header">
+          <div class="weather-location">
+            <span></span>
+            <span></span>
+          </div>
+          <span class="weather-temperature"></span>
         </div>
-        <span class="weather-temperature"></span>
+        <div class="name-header">
+          <h1 id="greeting" class="hidden"></h1>
+        </div>
+        <div class="clock-header">
+          <h2 class="clock">00:00</h2>
+        </div>
       </div>
-      <div></div>
     </header>
     <main>
-      <section id="main-left">
-      </section>
-      <section id="main-center">
-        <h2 class="clock">00:00</h2>
-        <form id="username-form" class="hidden">
-          <input class="username"
-            required
-            maxlength="15"
-            type="text"
-            placeholder="이름을 입력해주세요"
-          />
-        </form>
-        <h1 id="greeting" class="hidden"></h1>
-        <form id="todo-form">
-          <input type="text" placeholder="Write a To Do and Press Enter" required 
-          />
-        </form>
+      <form id="username-form" class="hidden">
+        <input
+          class="username"
+          required
+          maxlength="15"
+          type="text"
+          placeholder="이름을 입력해주세요"
+        />
+      </form>
 
-        <div id="quote">
-          <span></span>
-          <span></span>
-        </div>
-      </section>
+      <div class="todolist list-off">
+        <header>
+          <svg
+            width="32"
+            height="32"
+            fill="none"
+            viewBox="0 0 24 24"
+            class="todolist-closebtn"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 2.001c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10Zm.28 14.53a.75.75 0 0 1-.976.073l-.085-.072-4-4.001a.75.75 0 0 1-.073-.977l.073-.084 4.001-4a.75.75 0 0 1 1.133.977l-.072.084-2.722 2.72h6.691a.75.75 0 0 1 .744.649L17 12a.75.75 0 0 1-.648.744l-.102.006H9.56l2.72 2.72a.75.75 0 0 1 .073.977l-.073.084Z"
+              fill="#212121"
+            />
+          </svg>
 
-      <section id="main-right">
-        <ul id="todo-list"></ul>
-      </section>
+          <form class="toDoForm">
+            <input
+              class="toDoInput"
+              type="text"
+              placeholder="Write Plan, Press Enter"
+              required
+            />
+          </form>
+        </header>
+        <section class="todolist-main">
+          <label>진행 중</label>
+          <ul class="incomplete-list"></ul>
+          <label>진행 완료</label>
+          <ul class="complete-list"></ul>
+        </section>
+      </div>
+      <button class="todolist-openbtn todo-not-logined">메모</button>
+      <div class="skill-list">
+        <li>
+          <ion-icon name="logo-github"></ion-icon>
+        </li>
+        <li>
+          <ion-icon name="logo-javascript"></ion-icon>
+        </li>
+        <li>
+          <ion-icon name="logo-css3"></ion-icon>
+        </li>
+        <li>
+          <ion-icon name="logo-html5"></ion-icon>
+        </li>
+      </div>
+      <button class="skill-openbtn skill-not-logined">사용<br />기술</button>
     </main>
 
-    
     <script src="./js/apikey.js"></script>
-    <script src="./js/greeting.js"></script>
+    <script src="./js/login.js"></script>
     <script src="./js/clock.js"></script>
-    <script src="./js/quotes.js"></script>
     <script src="./js/background.js"></script>
     <script src="./js/backgroundsound.js"></script>
     <script src="./js/todo.js"></script>
+    <script src="./js/skillist.js"></script>
     <script src="./js/weather.js"></script>
-</body>
+
+    <script src="https://unpkg.com/ionicons@4.4.1/dist/ionicons.js"></script>
+  </body>
 </html>

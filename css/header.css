@@ -1,0 +1,49 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.weather-header {
+  background-color: rgba(200, 200, 200, 0.1);
+  box-shadow: 1px 1px 1px rgb(200, 200, 200);
+}
+
+.name-header,
+.weather-header,
+.clock-header {
+  padding: 15px;
+  border-radius: 15px;
+  text-shadow: 3px 3px 3px gray;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.clock-header {
+  margin-right: 50px;
+}
+
+.clock {
+  margin: 0px 0px 5px;
+  text-shadow: 2px 2px 2px gray;
+}
+
+.name-header {
+  left: 40%;
+}
+
+.header-list {
+  width: 100%;
+  top: 1.2rem;
+
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+
+  transition: 3s;
+}
+
+.not-logined {
+  top: -200px;
+}

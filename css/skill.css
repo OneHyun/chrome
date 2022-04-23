@@ -1,0 +1,95 @@
+.skill-list {
+  position: absolute;
+  bottom: 25px;
+  right: 0;
+  height: 75%;
+  width: 75px;
+  padding: 10px;
+
+  transition: 1s;
+}
+
+.skill-openbtn {
+  position: absolute;
+  bottom: 27px;
+  right: 3px;
+
+  border-radius: 50%;
+  background-color: #fcfefe;
+  box-shadow: inset 2px 2px 4px #5184d1, inset -4px -4px 6px rgb(204, 224, 255);
+  border-width: 0px;
+
+  width: 75px;
+  height: 75px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 1s;
+}
+
+.skill-openbtn:hover {
+  background-color: #e2f5ff;
+}
+
+.skill-not-logined {
+  right: -70%;
+}
+
+.skill-list.open {
+  height: 50%;
+}
+
+.skill-list li {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  opacity: 0;
+  right: 20%;
+  transition: 1s ease;
+  box-shadow: inset 2px 2px 4px #c7deff;
+  border-radius: 15px;
+}
+
+.skill-list > li.open {
+  opacity: 1;
+}
+
+.skill-list > li:nth-child(1) {
+  color: black;
+}
+
+.skill-list > li:nth-child(2) {
+  color: #edc869;
+}
+
+.skill-list > li:nth-child(3) {
+  color: #4186c2;
+}
+
+.skill-list > li:nth-child(4) {
+  color: #e06e3c;
+}
+
+.skill-list > li:nth-child(1).open {
+  transform: translateY(-110px);
+}
+
+.skill-list > li:nth-child(2).open {
+  transform: translateY(-180px);
+}
+
+.skill-list > li:nth-child(3).open {
+  transform: translateY(-250px);
+}
+
+.skill-list > li:nth-child(4).open {
+  transform: translateY(-320px);
+}
+ion-icon {
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  font-size: 3rem; /* 폰트 사이즈 */
+}
